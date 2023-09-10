@@ -1,0 +1,245 @@
+:root{
+    /*
+    *COLORS
+    */
+    --primary-color: rgb(254, 99, 15);
+    --secondary-color: rgb(255, 191, 0);
+    --white: rgb(255, 255, 255);
+    --info-light-color: #dce1eb;
+    --warning-color: rgb(255, 165, 0);
+    --color-dark: #363949;
+    --color-white: rgba(132, 139, 200, 0.18);
+    --info-color-dark:#7d8da1;
+    --color-dark-variant:#677483 ;
+
+    /*
+    *BORDER RADIUS
+    */
+
+    --card-border-radius: 2rem;
+    --border-radius-1: .4rem;
+    --border-radius-2: .8rem;
+    --border-radius-3: 1.2rem;
+
+    /*
+    *PADDING
+    */
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+
+    /*
+    *BOX SHADOW
+    */
+
+    --box-shadow: 0 2rem 3rem var(--light-color);
+}
+
+*{
+    margin: 0;
+    top: 0;
+    outline: 0;
+    padding: 0;
+    appearance: none;
+    border: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 14px;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family:poppins, sans-serif;
+    font-size: 0.88rem;
+    background-color: var(--white);
+    user-select: none;
+    overflow-x: hidden;
+}
+
+a{
+    color: var(--color-dark);  
+}
+
+img{
+    display: block;
+    width: 100%;
+}
+
+h1{
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+
+h2{
+    font-size: 1.4rem;
+    color: black;
+}
+
+h3{
+    font-size: .87rem;
+}
+
+h4{
+    font-size: .8rem;
+}
+
+h5{
+    font-size: .77rem;
+}
+
+small{
+    font-size: .75rem;
+}
+
+.profile-photo{
+    width: 2.8rem;
+    height: 2.8rem;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.text-muted{
+    color: var(--info-color-dark);
+}
+
+p{
+    color: var(--color-dark-variant);
+}
+
+b{
+    color: var(--color-dark);
+}
+
+.primary{
+    color: var(--primary-color);
+}
+
+.danger{
+    color: var(--primary-color);
+}
+
+.success{
+    color: var(--primary-color);
+}
+
+.warning{
+    color: var(--secondary-color);
+}
+
+.container{
+    display: grid;
+    width: 90%;
+    margin: 0 auto;
+    gap: 1.8rem;
+    background-color: var(--white);
+    grid-template-columns: 14rem auto 23rem;
+}
+
+aside{
+    height: 100vh;
+    color: var(--white);
+}
+
+aside .top{
+    background-color: rgb(247, 246, 246);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.4rem;
+    padding: 10px;
+    border-radius: var(--border-radius-2);
+}
+
+aside .logo {
+    display: flex;
+    gap: .8rem;
+}
+
+aside .logo img{
+    height: 2rem;
+    width: 2rem;
+}
+
+.aside .close{
+    display: none;
+}
+
+/*
+*SIDEBAR
+*/
+
+aside .sidebar{
+    display: flex;
+    flex-direction: column;
+    height: 86vh;
+    position: relative;
+    top: 3rem ;
+    border-radius: var(--border-radius-2);
+}
+
+aside h3{
+    font-weight: 600;
+}
+
+aside .sidebar a{
+    display: flex;
+    color: var(--info-color-dark);
+    margin-left: 2rem;
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+    height: 3.7rem;
+    transition: all 300ms ease;
+}
+
+aside .sidebar a span{
+    font-size: 1.6rem;
+    transition:  all 300ms ease;
+}
+
+aside .sidebar a:last-child{
+    position: relative;
+    top: 5rem;
+    width: 100%;
+}
+
+aside .sidebar a.active{
+    background-color: var(--light-color);
+    color: var(--primary-color);
+    margin-left: 0;
+}
+
+aside .sidebar a.active::before{
+    content: "";
+    width: 6px;
+    height: 100%;
+    background-color: var(--primary-color);
+}
+
+aside .sidebar a.active span{
+    color: var(--primary-color);
+    margin-left: calc((1rem - 3px));
+}
+
+aside .sidebar a:hover{
+    color: var(--primary-color);
+}
+
+aside .sidebar a:hover span{
+    color: var(--primary-color);
+    margin-left: calc(1rem - 3px);
+}
+
+aside .sidebar .message-count{
+    background-color: rgb(235, 189, 178);
+    border: 1px solid var(--primary-color);
+    color: white;
+    padding: 4px 10px;
+    font-size: 10px;
+    border-radius: var(--border-radius-1);
+}
+
