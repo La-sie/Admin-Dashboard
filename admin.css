@@ -8,9 +8,9 @@
     --info-light-color: #dce1eb;
     --warning-color: rgb(255, 165, 0);
     --color-dark: #363949;
-    --color-white: rgba(132, 139, 200, 0.18);
+    --color-gray: rgba(132, 139, 200, 0.18);
     --info-color-dark:#7d8da1;
-    --color-dark-variant:#677483 ;
+    --color-dark-variant:#a2a5a9 ;
 
     /*
     *BORDER RADIUS
@@ -32,7 +32,7 @@
     *BOX SHADOW
     */
 
-    --box-shadow: 0 2rem 3rem var(--light-color);
+    --box-shadow: 0 2rem 3rem var(--color-dark-variant);
 }
 
 *{
@@ -58,6 +58,7 @@ body{
     background-color: var(--white);
     user-select: none;
     overflow-x: hidden;
+    color: var(--color-dark);
 }
 
 a{
@@ -72,6 +73,7 @@ img{
 h1{
     font-weight: 800;
     font-size: 1.8rem;
+    color: var(--color-dark);
 }
 
 h2{
@@ -115,7 +117,7 @@ b{
 }
 
 .primary{
-    color: var(--primary-color);
+    color: red;
 }
 
 .danger{
@@ -127,7 +129,7 @@ b{
 }
 
 .warning{
-    color: var(--secondary-color);
+    color: rgb(177, 177, 7);
 }
 
 .container{
@@ -145,7 +147,7 @@ aside{
 }
 
 aside .top{
-    background-color: rgb(247, 246, 246);
+    background-color: rgb(248, 238, 238);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -175,10 +177,11 @@ aside .logo img{
 aside .sidebar{
     display: flex;
     flex-direction: column;
-    height: 86vh;
+    height: 80vh;
     position: relative;
     top: 3rem ;
     border-radius: var(--border-radius-2);
+    background-color: rgb(248, 238, 238);
 }
 
 aside h3{
@@ -208,7 +211,7 @@ aside .sidebar a:last-child{
 }
 
 aside .sidebar a.active{
-    background-color: var(--light-color);
+    background-color: rgb(242, 209, 191);
     color: var(--primary-color);
     margin-left: 0;
 }
@@ -243,3 +246,168 @@ aside .sidebar .message-count{
     border-radius: var(--border-radius-1);
 }
 
+/*
+*MAIN DASHBOARD
+*/
+
+main{
+    margin-top: 1.4rem;
+}
+
+main .date{
+    display: inline-block;
+    background: rgb(242, 209, 191);
+    border-radius: 5px;
+    margin-top: 1rem;
+    padding:  0.5rem 1.6rem;
+}
+
+main .date input[type = "date"]{
+    background: transparent;
+    color: var(--color-dark);
+}
+
+main .insights{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+}
+
+main .insights > div{
+    background-color: rgb(241, 223, 214);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    margin-top: 1rem;
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+}
+
+main .insights > div:hover{
+    box-shadow: none;
+}
+
+main .insights > div span{
+    background-color: rgb(209, 102, 102);
+    padding: .5rem;
+    border-radius: 50%;
+    color: black;
+    font-size: 2rem;
+}
+
+main .insights > div.expenses span{
+    background-color: var(--secondary-color);
+}
+
+main .insights > div.income span{
+    background-color: rgb(100, 223, 100);
+}
+
+main .insights > div .middle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .insights h3{
+    margin: 1rem 0 .6rem;
+    font-size: 1rem;
+}
+
+main .insights .progress{
+    position: relative;
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+}
+
+main .insights svg{
+    width: 7rem;
+    height: 7rem;
+}
+
+main .insights svg circle{
+    fill: none;
+    stroke: var(--primary-color);
+    stroke-width: 14;
+    stroke-linecap: round;
+    transform: translate(5px, 5px);
+    stroke-dasharray: 110;
+    stroke-dashoffset: 92;
+}
+
+main .insights .sales svg circle{
+    stroke-dashoffset: -30;
+    stroke-dasharray: 200;
+}
+
+main .insights .expenses svg circle{
+    stroke-dasharray: 80;
+    stroke-dashoffset: 20;
+}
+
+main .insights .income svg circle{
+    stroke-dashoffset: 35;
+    stroke-dasharray: 110;
+}
+
+main .insights .progress .number{
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+main .insights small{
+    margin-top: 1.6rem;
+    display: block;
+    font-size: 15px;
+}
+
+/*
+* RECENT ORDERS SECTION
+*/
+
+main .recent-orders{
+    margin-top: 2rem;
+}
+
+main .recent-orders h2{
+    margin-bottom: .8rem;
+}
+
+main .recent-orders table{
+    background: rgb(241, 223, 214);
+    width: 100%;
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition:  all 300ms ease;
+}
+
+main .recent-orders table:hover{
+    box-shadow: none;
+}
+
+main table tbody td{
+    border-bottom: 1px solid var(--color-gray);
+    color: var(--color-dark-variant);
+    height: 2.8rem;
+}
+
+main table tbody tr:last-child td{
+    border: none;
+}
+
+main .recent-orders a{
+    text-align: center;
+    display: block;
+    margin: 1rem auto;
+    color: var(--color-dark);
+    font-size: 14px;
+}
