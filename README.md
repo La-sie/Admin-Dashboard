@@ -24,4 +24,4 @@ It is responsive for all screen sizes.
 <h3> Images</h3>
 <h4> Desktop screen</h4>
 
-<img src="./images/Screenshot 2023-09-11 20.39.29.png" alt="Admin dashboard for Desktop screen">
+<img src="images/Screenshot 2023-09-11 20.39.29.png" alt="Admin dashboard for Desktop screen">
