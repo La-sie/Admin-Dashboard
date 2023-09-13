@@ -28,4 +28,4 @@
 
 <h4> Ipad</h4>
 <br>
-<img src="Screenshot 2023-09-13 19.43.32.png" alt="Admin dashboard for Ipad screen">
+<img src="images/Screenshot 2023-09-13 19.43.32.png" alt="Admin dashboard for Ipad screen">
