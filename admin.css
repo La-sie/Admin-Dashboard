@@ -31,7 +31,6 @@
     /*
     *BOX SHADOW
     */
-
     --box-shadow: 0 2rem 2rem rgb(114, 112, 112);
 }
 
@@ -632,6 +631,7 @@ main .recent-orders a{
 @media screen and (max-width: 768px) {
     .container{
         width: 100%;
+        grid-template-columns: 2fr;
     }
 
     aside{
@@ -697,6 +697,43 @@ main .recent-orders a{
         align-items: center;
         padding: 0 .8rem;
         height: 4.6rem;
-        background: ;
+        background-color: rgb(248, 238, 238);
+        width: 100%;
+        margin: 0;
+        z-index: 2;
+        box-shadow: 0 2rem 2rem var(--box-shadow);
     }
+
+    .right .top .theme-toggler{
+        width: 4.4rem;
+        position: absolute;
+        left: 80%;
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+
+
+    .right .top .grid-view{
+        margin-top: 15px;
+    }
+
+    .right .top button{
+        display: inline-block;
+        background-color: transparent;
+        cursor: pointer;
+        color: var(--color-dark);
+        position: absolute;
+        left: 1rem;
+        font-size: 1rem;
+    }
+
+    .right .top button span{
+        font-size: 2rem;
+    }
+
+    .right .profile .info{
+        display: none;
+    }
+
+    
 }
