@@ -34,6 +34,19 @@
     --box-shadow: 0 2rem 2rem rgb(114, 112, 112);
 }
 
+
+    /*
+    *DARK THEME
+    */
+    .dark-theme-variables{
+        --primary-color-2: rgb(254, 99, 15);
+        --secondary-color-2: rgb(255, 191, 0);
+        --white-color: rgb(45, 43, 43);
+        --box-shadow: 0 2rem 2rem rgb(114, 112, 112);
+        --color-dark-variant-2: #a3bdcc;
+        --color-light: rgba(0, 0, 0, .4);
+    }
+
 *{
     margin: 0;
     top: 0;
@@ -631,19 +644,26 @@ main .recent-orders a{
 @media screen and (max-width: 768px) {
     .container{
         width: 100%;
-        grid-template-columns: 2fr;
+        grid-template-columns: 1fr;
     }
 
     aside{
         position: fixed;
         background-color: rgb(248, 238, 238);
-        left: 0;
+        left: -100%;
         width: 18rem;
         z-index: 3;
         box-shadow: 1rem 3rem 4rem var(--box-shadow);
         height: 100vh;
         padding-right: var(--card-padding);
         display: none;
+        animation: showMenu 400ms ease forwards;
+    }
+
+    @keyframes showMenu {
+        to{
+            left: 0;
+        }
     }
 
     aside .logo{
@@ -682,7 +702,7 @@ main .recent-orders a{
 
     main .recent-orders table{
         width: 100%;
-        margin:  0 auto 4rem;
+        margin:  0;
     }
 
     .right{
@@ -701,7 +721,7 @@ main .recent-orders a{
         width: 100%;
         margin: 0;
         z-index: 2;
-        box-shadow: 0 2rem 2rem var(--box-shadow);
+        box-shadow: 0 1rem 1rem var(--color-dark-variant);
     }
 
     .right .top .theme-toggler{
