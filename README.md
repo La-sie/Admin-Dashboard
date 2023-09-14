@@ -2,7 +2,7 @@
 
 <p> This is asimple dashboard imade using <b>html</b>, <b>css</b>, and <b> javacript</b>.<br>
    It is responsive for all screen sizes.
-  This is included in my practice of javascript. The purpose of this dashboard is to solidify my knowledge in css and javascript.
+  This is included in my practice of javascript. I did this with Youtube.
 </p>
 
 <h3> Displays</h3>
