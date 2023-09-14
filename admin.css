@@ -6,11 +6,11 @@
     --secondary-color: rgb(255, 191, 0);
     --white: rgb(255, 255, 255);
     --info-light-color: #dce1eb;
-    --warning-color: rgb(255, 165, 0);
+    --warning-color: rgb(177, 177, 7);
     --color-dark: #363949;
     --color-gray: rgba(132, 139, 200, 0.18);
     --info-color-dark:#7d8da1;
-    --color-dark-variant:#a2a5a9 ;
+    --color-dark-variant:#a2a5a9;
 
     /*
     *BORDER RADIUS
@@ -39,12 +39,13 @@
     *DARK THEME
     */
     .dark-theme-variables{
-        --primary-color-2: rgb(254, 99, 15);
-        --secondary-color-2: rgb(255, 191, 0);
-        --white-color: rgb(45, 43, 43);
+        --primary-color: rgb(254, 99, 15);
+        --secondary-color: rgb(255, 191, 0);
+        --white: rgb(7, 7, 7);
         --box-shadow: 0 2rem 2rem rgb(114, 112, 112);
-        --color-dark-variant-2: #a3bdcc;
+        --color-dark-variant: #a3bdcc;
         --color-light: rgba(0, 0, 0, .4);
+        --color-dak: white
     }
 
 *{
