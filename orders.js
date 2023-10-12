@@ -1,3 +1,6 @@
+/*
+*Reina's code
+*/
 const Orders = [
     {
         productName: 'Foldable Mini Drone',
